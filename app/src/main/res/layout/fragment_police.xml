@@ -65,6 +65,7 @@
 
                 <!--Title-->
                 <TextView
+                    android:clickable="true"
                     android:id="@+id/textViewStatoin2"
                     android:layout_alignParentBottom="true"
                     android:padding="5dp"
