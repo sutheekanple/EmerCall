@@ -5,16 +5,15 @@
 
     <!--Red Layout-->
     <LinearLayout
-        android:background="#82ffffff"
+        android:background="#82ace6d1"
         android:padding="20dp"
         android:layout_centerInParent="true"
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <!--Blue Lauyout-->
+        <!--Blue Layout-->
         <LinearLayout
-            android:padding="20dp"
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -25,12 +24,13 @@
                 android:layout_width="@dimen/icon"
                 android:layout_height="@dimen/icon">
 
-                <!--stationl-->
+                <!--station1-->
                 <ImageView
                     android:src="@drawable/station1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
 
+                <!--Title-->
                 <TextView
                     android:layout_alignParentBottom="true"
                     android:padding="5dp"
@@ -39,11 +39,12 @@
                     android:background="#82000000"
                     android:textStyle="bold"
                     android:textSize="18sp"
-                    android:text="Station 1"
+                    android:text="Station1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
             </RelativeLayout>
+
 
 
             <!--Green Layout-->
@@ -52,22 +53,34 @@
                 android:layout_width="@dimen/icon"
                 android:layout_height="@dimen/icon">
 
-                <!--Station2-->
+                <!--station2-->
                 <ImageView
                     android:src="@drawable/station2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
 
-            </RelativeLayout>
+                <!--Title-->
+                <TextView
+                    android:layout_alignParentBottom="true"
+                    android:padding="5dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:background="#82000000"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:text="Station1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
+
+            </RelativeLayout>
 
 
 
         </LinearLayout>
 
-        <!--Blue Lauyout-->
+        <!--Blue Layout-->
         <LinearLayout
-            android:layout_margin="@dimen/margin"
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -82,9 +95,25 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
                     android:src="@drawable/station3" />
+                <!--Title-->
+                <TextView
+                    android:layout_alignParentBottom="true"
+                    android:padding="5dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:background="#82000000"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:text="Station1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
             </RelativeLayout>
+
 
 
             <!--Green Layout-->
@@ -99,14 +128,28 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
 
-            </RelativeLayout>
+                <!--Title-->
+                <TextView
+                    android:layout_alignParentBottom="true"
+                    android:padding="5dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:background="#82000000"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:text="Station1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
+            </RelativeLayout>
 
 
         </LinearLayout>
 
 
     </LinearLayout>
+
+
 
 
 
