@@ -1,6 +1,8 @@
 package masterple.snru.sc.th.emercall.fragment;
 
+import android.content.Intent;
 import android.media.Image;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,6 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.time.Instant;
 
 import masterple.snru.sc.th.emercall.R;
 
@@ -35,6 +39,7 @@ public class MainFragment extends Fragment {
             public void onClick(View view) {
 
                 Log.d(tag, "You click image Station1");
+                callStation("1111");
 
             }
         });
@@ -59,7 +64,12 @@ public class MainFragment extends Fragment {
 
     public  void callStation(String numberCall){
 
-    }
+        Intent instant = new Intent(Intent.ACTION_CALL);
+        instant.setData(Uri.parse("tel:=" + numberCall));
+        startActivity(instant);
+
+
+    }  // callStation
 
 
 
