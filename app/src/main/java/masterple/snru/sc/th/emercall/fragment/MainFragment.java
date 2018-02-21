@@ -1,11 +1,16 @@
 package masterple.snru.sc.th.emercall.fragment;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import masterple.snru.sc.th.emercall.R;
 
@@ -14,6 +19,49 @@ import masterple.snru.sc.th.emercall.R;
  */
 
 public class MainFragment extends Fragment {
+
+    // Explicit
+    private  String tag = "MyTagV1";
+
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+         //      For Station 1
+        ImageView station1ImageView = getView().findViewById(R.id.imageViewStation1);
+        station1ImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Log.d(tag, "You click image Station1");
+
+            }
+        });
+
+        TextView station1TextView  = getView().findViewById(R.id.textViewStatoin1);
+        station1TextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d(tag,"Click Text "+ getString(R.string.station1));
+
+            }
+        });
+
+        //      For Station  2
+
+        //      For Station  3
+
+        //      For Station  4
+
+
+    } //Main Method
+
+    public  void callStation(String numberCall){
+
+    }
+
+
 
     @Nullable
     @Override
