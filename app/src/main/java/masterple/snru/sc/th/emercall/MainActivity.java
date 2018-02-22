@@ -8,15 +8,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
+import masterple.snru.sc.th.emercall.fragment.HospitalFragment;
 import masterple.snru.sc.th.emercall.fragment.MainFragment;
+
 
 public class MainActivity extends AppCompatActivity {
 
-    // Explicit
+    //    Explicit
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
-
 
 
     @Override
@@ -24,7 +27,39 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-     //   Create Toolbar
+//        Police Controller
+        TextView policeTextView = findViewById(R.id.txtPolice);
+        policeTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.contentMainFeagment, new MainFragment()).commit();
+                drawerLayout.closeDrawers();
+            }
+        });
+
+
+
+//        Hospital Controller
+        TextView hospitalTextView = findViewById(R.id.txtPolice);
+        hospitalTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.contentMainFeagment, new HospitalFragment()).commit();
+                drawerLayout.closeDrawers();
+            }
+        });
+
+
+//        Insurance Controller
+
+
+//        Exit Controller
+
+
+
+//        Create Toolbar
         Toolbar toolbar = findViewById(R.id.toolbarMain);
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeButtonEnabled(true);
@@ -39,39 +74,40 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
 
 
-//    Add Fragment
-            if (savedInstanceState == null) {
+//        Add Fragment
+        if (savedInstanceState == null) {
 
-                getSupportFragmentManager().beginTransaction()
-                        .add(R.id.contentMainFeagment, new MainFragment()).commit();
-
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.contentMainFeagment, new MainFragment()).commit();
 
         }
 
-    }  //Main Method
+
+    }   // Main Method
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
         if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
             return true;
-
         }
+
         return super.onOptionsItemSelected(item);
     }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
+
         actionBarDrawerToggle.onConfigurationChanged(newConfig);
+
     }
 
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
 
-
-    actionBarDrawerToggle.syncState();
+        actionBarDrawerToggle.syncState();
 
     }
-}// Main Class
+}   // Main Class
