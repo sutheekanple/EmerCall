@@ -37,19 +37,15 @@ public class MainFragment extends Fragment {
         station1ImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Log.d(tag, "You click image Station1");
                 callStation("1111");
 
             }
         });
-
-        TextView station1TextView  = getView().findViewById(R.id.textViewStatoin1);
+        TextView station1TextView = getView().findViewById(R.id.textViewStatoin1);
         station1TextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d(tag,"Click Text "+ getString(R.string.station1));
-
+                callStation("1111");
             }
         });
 
@@ -72,7 +68,6 @@ public class MainFragment extends Fragment {
 
 
         //      For Station  3
-
         ImageView station3ImageView = getView().findViewById(R.id.imageViewStation3);
         station3ImageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,27 +77,34 @@ public class MainFragment extends Fragment {
             }
         });
         TextView station3TextView = getView().findViewById(R.id.textViewStatoin3);
-       station3TextView.setOnClickListener(new View.OnClickListener() {
+        station3TextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 callStation("3333");
+            }
+        });
+
+
 
 
 
         //      For Station  4
-                ImageView station4ImageView = getView().findViewById(R.id.imageViewStation4);
-                station4ImageView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        callStation("4444");
+        ImageView station4ImageView = getView().findViewById(R.id.imageViewStation4);
+        station4ImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callStation("4444");
 
-                    }
-                });
-                TextView station4TextView = getView().findViewById(R.id.textViewStatoin4);
-                station4TextView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        callStation("4444");
+            }
+        });
+        TextView station4TextView = getView().findViewById(R.id.textViewStatoin4);
+        station4TextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callStation("4444");
+            }
+        });
+
 
     } //Main Method
 
